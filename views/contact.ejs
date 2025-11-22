@@ -1,0 +1,152 @@
+<%- include("partials/header.ejs") %>
+
+<div class="myIdentity">
+    <div class="leftidentity">
+        <h1>My Contact Information...</h1>
+        <div class="imgs">
+            <h5><img src="/images/phone-call.png" alt="phone"> +91 9890580131</h5>
+            <h5><img src="/images/pin.png" alt="loc"> Nagpur, Maharashtra , India.</h5>
+            <h5><img src="images/email.png" alt="email"> sukhadabhalerao2005@gmail.com</h5>
+            <h5> 
+                <a href="/linkedIn" target="_blank">
+                    <img src="/images/linkedin.png" alt="linkedIn">
+                </a> 
+                www.linkedin.com/in/sukhada-bhalerao-7339a2340
+            </h5>
+        </div>
+    </div>
+    <div class="rightIdentity">
+        <img id="contact-img" src="/images/Contact.png" alt="location-item">
+    </div>
+</div>
+
+<div class="contact-form">
+    <h1 class="tag" style="text-align: center; font-size: 3rem; margin-bottom: 20px;">Let's connect</h1>
+    <p style="text-align: center; margin-bottom: 40px;">
+        I'm actively building skills in Web Development and Systems Engineering. <br>Send me a message!
+    </p>
+    
+    <form action="/send" method="POST">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="fname" class="label">First Name*</label>
+                <input type="text" name="fname" id="fname" placeholder="Enter your First Name" required>
+            </div>
+            <div class="form-group">
+                <label for="lname" class="label">Last Name*</label>
+                <input type="text" name="lname" id="lname" placeholder="Enter your Last Name" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="email" class="label">Email*</label>
+                <input type="email" name="email" id="email" placeholder="Enter your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="Subject" class="label">Subject*</label>
+                <input type="text" name="Subject" id="Subject" placeholder="Subject of discussion" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="message" class="label">Message*</label>
+                <textarea name="message" id="message" rows="5" placeholder="Please elaborate your subject." required></textarea>
+            </div>
+        </div>
+
+        <div class="submitbutton">
+            <button  type="submit">Get in Touch</button>
+        </div>
+    </form>
+</div>
+
+<%- include("partials/footer.ejs") %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="myIdentity">
+        <div class="leftidentity">
+            <h1>My Contact Information...</h1>
+            <div class="imgs">
+                <h5><img id="img1" src="/images/phone-call.png" alt="phone-call.png"> +91 9890580131</h5>
+                <h5><img id="img2" src="/images/pin.png" alt=""> Nagpur, Maharashtra , India.</h5>
+                <h5><img id="img3" src="images/email.png" alt="email.png"> sukhadabhalerao2005@gmail.com</h5>
+                <h5> <a href="/linkedIn" target="_blank"><img id="img4" src="/images/linkedin.png" alt="linkedIn.png"></a> www.linkedin.com/in/sukhada-bhalerao-7339a2340</h5>
+            </div>
+        </div>
+        <div class="rightIdentity">
+            <img id="contact-img" src="/images/Contact.png" alt="location-item">
+        </div>
+    </div>
+    <div class="contact-form">
+        <h1 class="tag">Let's connect</h1>
+        <p>I'm actively building skills in Web Development and Systems Engineering and am ready for freelance,
+            internship, or entry-level roles. <br>Send me a message, or find me on my networks to start a conversation!
+        </p>
+        <form action="/send" method="POST">
+            <div class="first">
+                <label for="fname" class="label firstname">First Name* <br><input type="text" name="fname"
+                        id="fname"><p class="subtitles">Please Enter your First-name above.</p></label>
+                <label for="lname" class="label lastname ">Last Name* <br><input type="text" name="lname"
+                        id="lname"><p class="subtitles">Please Enter your Last-name above.</p></label>
+            </div>
+            <div class="third">
+                <label for="email" class="label email">Email* <br><input type="alphanumeric" name="email"
+                        id="email"><p class="subtitles">Please Enter your mail above.</p></label>
+                <label for="Subject" class="label subject ">Subject* <br><input type="text" name="Subject"
+                        id="Subject"><p class="subtitles">Please enter the subject to be discussed above.</p></label>
+            </div>
+
+            <div class="second">
+                <label for="message" class="label message ">Message* <br><textarea name="message"
+                        id="message"></textarea><p class="subtitles">Please elaborate the subject mentioned.</p></label>
+            </div>
+            <div class="submitbutton">
+                <button type="submit" class="btn btn-outline-dark">Get in Touch</button>
+            </div>
+
+        </form>
+
+    </div> -->
