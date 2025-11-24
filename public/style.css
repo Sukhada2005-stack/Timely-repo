@@ -80,7 +80,7 @@ nav ul {
 }
 
 .menu {
-    width: 30px;
+    width: 50px;
     cursor: pointer;
     display: none; /* Hidden on Desktop */
 }
@@ -306,6 +306,7 @@ display: block;
 .skill-info {
     font-size: 1.1rem;
     line-height: 1.6;
+    width:100%;
 }
 
 /* Responsive Grid for Icons */
