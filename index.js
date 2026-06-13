@@ -8,7 +8,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const __filename = path.join(__dirname,'public','Sukhada_Resume_File (1).pdf'); 
+const __filename = path.join(__dirname,'public','Sukhada Bhalerao_CE.pdf'); 
 const app = express();
 const port = 3000;
 
@@ -19,6 +19,9 @@ app.use(bodyParser.json());
 app.set('view engine', 'ejs');
 
 app.get("/",(req,res)=>{
+     const year = new Date().getUTCFullYear();
+     console.log(year);
+     
      res.render("index.ejs");
 });
 
@@ -27,7 +30,7 @@ app.get("/contact",(req,res)=>{
 });
 
 app.post("/download",(req,res)=>{
-  res.download(__filename,'Sukhada_Resume_File (1).pdf',(err)=>{
+  res.download(__filename,'Sukhada Bhalerao_CE.pdf',(err)=>{
     if(err) 
     {
       console.log("Error Downloading this file: ",err);
@@ -63,6 +66,10 @@ app.post("/send",async (req,res)=>{
 
 app.get("/linkedIn",(req,res)=>{
      res.redirect('https://www.linkedin.com/in/sukhada-bhalerao-7339a2340');
+});
+
+app.get("/github",(req,res)=>{
+  res.redirect('https://github.com/Sukhada2005-stack');
 });
 
 app.get("/projects",(req,res)=>{

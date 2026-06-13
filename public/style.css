@@ -2,7 +2,8 @@
    1. GLOBAL RESET & VARIABLES
    ========================================= */
 * {
-    box-sizing: border-box; /* Essential for responsive layout */
+    box-sizing: border-box;
+    /* Essential for responsive layout */
 }
 
 html {
@@ -16,7 +17,8 @@ body {
     font-family: "Lato", sans-serif;
     background-color: #052547;
     color: white;
-    overflow-x: hidden; /* Prevents horizontal scrollbar */
+    overflow-x: hidden;
+    /* Prevents horizontal scrollbar */
 }
 
 /* Standard container to prevent content hitting edges */
@@ -44,7 +46,7 @@ nav {
     width: 100%;
     z-index: 1000;
     padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 nav ul {
@@ -82,7 +84,8 @@ nav ul {
 .menu {
     width: 50px;
     cursor: pointer;
-    display: none; /* Hidden on Desktop */
+    display: none;
+    /* Hidden on Desktop */
 }
 
 /* Sidebar (Mobile/Tablet) */
@@ -94,10 +97,11 @@ nav ul {
     width: 280px;
     background-color: white;
     z-index: 1001;
-    display: none; /* Toggled by JS */
+    display: none;
+    /* Toggled by JS */
     flex-direction: column;
     padding-top: 60px;
-    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar li {
@@ -124,7 +128,8 @@ nav ul {
    3. HERO SECTION (Index)
    ========================================= */
 .outer {
-    padding-top: 100px; /* Space for fixed nav */
+    padding-top: 100px;
+    /* Space for fixed nav */
     min-height: 90vh;
     display: flex;
     align-items: center;
@@ -134,7 +139,8 @@ nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allows stacking */
+    flex-wrap: wrap;
+    /* Allows stacking */
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -177,7 +183,9 @@ nav ul {
     flex-wrap: wrap;
 }
 
-#button1, #button2, #button3 {
+#button1,
+#button2,
+#button3 {
     width: 180px;
     height: 50px;
     border-radius: 5px;
@@ -190,24 +198,28 @@ nav ul {
     justify-content: center;
 }
 
-#button1 { 
-background: transparent; 
-border: 2px solid white; 
-color: white; 
-}
-#button2 { 
-background: white; 
-color: #052547; 
-}
-#button3 { 
-background: transparent; 
-border: 2px solid white; 
-color: white; 
-margin: 30px auto; 
-display: block; 
+#button1 {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
 }
 
-#button1:hover, #button2:hover, #button3:hover {
+#button2 {
+    background: white;
+    color: #052547;
+}
+
+#button3 {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    margin: 30px auto;
+    display: block;
+}
+
+#button1:hover,
+#button2:hover,
+#button3:hover {
     transform: translateY(3px);
 }
 
@@ -220,8 +232,8 @@ display: block;
 
 .rightdiv img {
     filter: drop-shadow(1px 1px 20px aqua);
-    height:550px;
-    width:550px;
+    height: 550px;
+    width: 550px;
     /* filter: drop-shadow(0 0 30px rgba(0, 255, 255, 0.2)); */
 }
 
@@ -246,7 +258,15 @@ display: block;
 }
 
 /* Hide code decorations on mobile to clean up UI */
-.about-style, .design, .p3, .p4, .t1, .t2, .t3 { display: none; }
+.about-style,
+.design,
+.p3,
+.p4,
+.t1,
+.t2,
+.t3 {
+    display: none;
+}
 
 .profile {
     display: flex;
@@ -254,6 +274,32 @@ display: block;
     justify-content: center;
     gap: 50px;
     flex-wrap: wrap;
+}
+
+.web-dev-proj {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 100px;
+    min-height: 90vh;
+    width: 100%;
+}
+
+.project {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    align-self: center;
+}
+
+#proj-heading {
+    margin: 0;
+    margin-left: 5%;
+    padding: 0;
 }
 
 .myImage {
@@ -306,7 +352,7 @@ display: block;
 .skill-info {
     font-size: 1.1rem;
     line-height: 1.6;
-    width:100%;
+    width: 100%;
 }
 
 /* Responsive Grid for Icons */
@@ -395,7 +441,8 @@ display: block;
     margin-bottom: 5px;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -426,48 +473,106 @@ input, textarea {
 
 /* Tablets (iPad) and smaller Desktops */
 @media (max-width: 1024px) {
-    #name { font-size: 3rem; }
-    .leftdiv h3 { font-size: 1.5rem; }
-    .hero-wrapper, .profile, .main-skill, .myIdentity {
+    #name {
+        font-size: 3rem;
+    }
+
+    .leftdiv h3 {
+        font-size: 1.5rem;
+    }
+
+    .hero-wrapper,
+    .profile,
+    .main-skill,
+    .myIdentity {
         justify-content: center;
         text-align: center;
     }
-    .about-text, .skill-content { text-align: center; }
-    .leftdiv { padding-right: 0; margin-bottom: 40px; }
-    .hero-buttons { justify-content: center; }
+
+    .about-text,
+    .skill-content {
+        text-align: center;
+    }
+
+    .leftdiv {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
 }
 
 /* Mobile Devices */
 @media (max-width: 768px) {
+
     /* Nav */
-    .navbar-item { display: none; }
-    .menu { display: block; }
-    
+    .navbar-item {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
     /* Hero */
-    .outer { padding-top: 80px; }
-    .hero-wrapper { flex-direction: column-reverse; }
-    #name { font-size: 2.5rem; }
-    
+    .outer {
+        padding-top: 80px;
+    }
+
+    .hero-wrapper {
+        flex-direction: column-reverse;
+    }
+
+    #name {
+        font-size: 2.5rem;
+    }
+
     /* About */
-    #tag-about { font-size: 3rem; }
-    .profile { gap: 30px; }
-    
+    #tag-about {
+        font-size: 3rem;
+    }
+
+    .profile {
+        gap: 30px;
+    }
+
     /* Skills */
-    #tag-skills { font-size: 3rem; }
-    .skill-logos { gap: 15px; }
-    .skill-icon { height: 60px; width: 60px; }
+    #tag-skills {
+        font-size: 3rem;
+    }
+
+    .skill-logos {
+        gap: 15px;
+    }
+
+    .skill-icon {
+        height: 60px;
+        width: 60px;
+    }
 
     /* Contact */
-    .form-row { flex-direction: column; gap: 10px; }
-    .myIdentity { flex-direction: column; text-align: center; }
-    .imgs h5 { justify-content: center; }
+    .form-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .myIdentity {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imgs h5 {
+        justify-content: center;
+    }
 }
 
 /*8). Projects*/
-.project{
+.project {
     display: flex;
     flex-direction: row;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     margin-top: 150px;
 }
 
