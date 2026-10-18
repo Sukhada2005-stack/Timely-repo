@@ -334,29 +334,77 @@ nav ul {
     margin-bottom: 40px;
 }
 
-.main-skill {
+.skills {
+    width: 100%;
+    height: auto;
+    margin: 0;
     display: flex;
-    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-left-container {
+    margin: 0;
+    width: 50%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    text-align: center;
 }
 
-.skill-content {
-    flex: 1;
-    min-width: 300px;
-    max-width: 500px;
-    text-align: left;
+.skill-right-container {
+    padding: 5px 10px;
+    width: 50%;
+    display: flex;
+    gap: 10px;
 }
 
-.skill-info {
-    font-size: 1.1rem;
-    line-height: 1.6;
+.skill-items {
+    padding: 15px 5px 0 10px;
+    height: 300px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    width: 300px;
+    border-radius: 8px;
+}
+
+.card-heading{
+    text-align: start;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+}
+.lang-grid-container{
+    margin: 0;
+    height:88%;
     width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:5.5px;
+}
+
+.grid-items{
+    border-radius: 7px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    padding:5px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-items:hover{
+    border:1px solid rgba(255, 255, 255, 0.40);
+}
+.skill-name{
+    margin: 0;
+    padding: 0 0 5px 0;
+    color:white;
+    font-size: 0.85rem;
 }
 
 /* Responsive Grid for Icons */
-.skill-logos {
+/* .skill-logos {
     flex: 1;
     min-width: 300px;
     display: flex;
@@ -373,7 +421,10 @@ nav ul {
 
 .skill-icon:hover {
     transform: scale(1.2) rotate(360deg);
-}
+} */
+
+
+
 
 /* =========================================
    6. CONTACT SECTION

@@ -52,13 +52,23 @@ app.post("/send",async (req,res)=>{
       subject : Subject,
       text : "Message from "+fname+" "+lname+"("+email+")"+" :\n\n"+message+" ",
     }
+    const success = {
+        headText : "Message Transmitted Successfully!",
+        subText : "Thank you for reaching out! Your message has safely landed in my inbox.I will review your email and get back to you as soon as possible.",
+        errorStatus : false
+      };
+    const failure = {
+      headText : "Transmission Interrupted!",
+      subText : "Something went wrong on the server side while processing your message.You can try submitting again, or reach out to me directly at <b>sukhadabhalerao2005@gmail.com</b>",
+      errorStatus : true
+    };  
     try{
       await transporter.sendMail(mailobject);
-      res.status(200).render("status_modal.ejs");
+      res.status(200).render("status_modal.ejs",{content : success});
     }catch(error)
     {
       console.log(error)
-      res.status(500).send("Error sending Email.");
+      res.status(500).render("status_modal.ejs",{content : failure});
     }
 });
 
@@ -77,3 +87,4 @@ app.get("/projects",(req,res)=>{
 app.listen(port,()=>{
   console.log("The server is listening on port "+port);
 });
+

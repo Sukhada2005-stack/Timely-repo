@@ -34,22 +34,25 @@
             gap: 15px;
             padding: 20px;
             width: 31%;
-            height: auto;  /*40dvh*/
+            height: auto;
+            /*40dvh*/
             border-radius: 10px;
             background-color: #ffffff;
-            border: 1px solid rgba(0, 0, 0, 0.5);
+            border: 0.5px solid rgba(204, 204, 204 , 0.5);
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
         }
 
         .status-modal h1 {
             font-family: "Lato", sans-serif;
-            font-weight: 400;
+            font-weight: 500;
             font-style: normal;
             text-align: center;
         }
 
         .status-modal p {
+            line-height: 21px;
             font-family: "Lato", sans-serif;
-            font-weight: 350;
+            font-weight: 400;
             font-style: normal;
             text-align: center;
         }
@@ -62,19 +65,28 @@
             height: 38px;
             padding: 5px 10px 5px 10px;
             border-radius: 8px;
-            color:#ffffff;
+            color: #ffffff;
             border: 1px solid #ccc;
-            background-color: #27cd88;
             transition: transform 0.3s;
         }
 
-        .status-modal button:hover{
+        .status-modal button:hover {
             transform: translateY(2px);
         }
-        .status-modal button:active{
-            background-color: #44bb89;
+
+        #button1 {
+            background-color: #27cd88;
         }
 
+        #button1:active {
+            background-color: #44bb89;
+        }
+        #button2{
+            background-color:#fa3f3f;
+        }
+        #button2:active{
+            background-color:#FF2C2C;
+        }
         .status-modal form {
             display: flex;
             justify-content: center;
@@ -85,12 +97,23 @@
 
 <body>
     <div class="status-modal">
-        <h1>Message Transmitted Successfully!</h1>
-        <p>Thank you for reaching out! Your message has safely landed in my inbox.I will review your email and get back
-            to you as soon as possible.</p>
-        <form action="/" method="get">
-            <button type="submit">Back To Homepage</button>
-        </form>
+        <% if(locals.content){ %>
+            <h1>
+                <%= content.headText %>
+            </h1>
+            <p>
+                <%- content.subText %>
+            </p>
+            <% if(content.errorStatus===false){ %>
+                <form action="/" method="get">
+                    <button type="submit" id="button1">Back To Homepage</button>
+                </form>
+                <% }else{ %>
+                    <form action="/contact" method="get">
+                        <button type="submit" id="button2">Try Again</button>
+                    </form>
+                    <% } %>
+                        <% } %>
     </div>
 </body>
 
