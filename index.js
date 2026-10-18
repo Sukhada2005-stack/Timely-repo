@@ -20,8 +20,6 @@ app.set('view engine', 'ejs');
 
 app.get("/",(req,res)=>{
      const year = new Date().getUTCFullYear();
-     console.log(year);
-     
      res.render("index.ejs");
 });
 
@@ -29,7 +27,7 @@ app.get("/contact",(req,res)=>{
   res.render("contact.ejs");
 });
 
-app.post("/download",(req,res)=>{
+app.get("/download",(req,res)=>{
   res.download(__filename,'Sukhada Bhalerao_CE.pdf',(err)=>{
     if(err) 
     {
@@ -56,7 +54,7 @@ app.post("/send",async (req,res)=>{
     }
     try{
       await transporter.sendMail(mailobject);
-      res.status(200).send("Email Sent successfully!");
+      res.status(200).render("status_modal.ejs");
     }catch(error)
     {
       console.log(error)

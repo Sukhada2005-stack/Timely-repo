@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recieved Status Modal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f9f9f9;
+        }
+
+        .status-modal {
+            margin: 230px 0 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            width: 31%;
+            height: auto;  /*40dvh*/
+            border-radius: 10px;
+            background-color: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+        }
+
+        .status-modal h1 {
+            font-family: "Lato", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            text-align: center;
+        }
+
+        .status-modal p {
+            font-family: "Lato", sans-serif;
+            font-weight: 350;
+            font-style: normal;
+            text-align: center;
+        }
+
+        .status-modal button {
+            font-family: "Lato", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            width: 40%;
+            height: 38px;
+            padding: 5px 10px 5px 10px;
+            border-radius: 8px;
+            color:#ffffff;
+            border: 1px solid #ccc;
+            background-color: #27cd88;
+            transition: transform 0.3s;
+        }
+
+        .status-modal button:hover{
+            transform: translateY(2px);
+        }
+        .status-modal button:active{
+            background-color: #44bb89;
+        }
+
+        .status-modal form {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="status-modal">
+        <h1>Message Transmitted Successfully!</h1>
+        <p>Thank you for reaching out! Your message has safely landed in my inbox.I will review your email and get back
+            to you as soon as possible.</p>
+        <form action="/" method="get">
+            <button type="submit">Back To Homepage</button>
+        </form>
+    </div>
+</body>
+
+</html>
