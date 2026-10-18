@@ -8,7 +8,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const __filename = path.join(__dirname,'public','Sukhada Bhalerao_CE.pdf'); 
+const __filename = path.join(__dirname,'public','Sukhada_Bhalerao_CE.pdf'); 
 const app = express();
 const port = 3000;
 
@@ -28,7 +28,7 @@ app.get("/contact",(req,res)=>{
 });
 
 app.get("/download",(req,res)=>{
-  res.download(__filename,'Sukhada Bhalerao_CE.pdf',(err)=>{
+  res.download(__filename,'Sukhada_Bhalerao_CE.pdf',(err)=>{
     if(err) 
     {
       console.log("Error Downloading this file: ",err);
