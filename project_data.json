@@ -1,0 +1,66 @@
+{
+    "projects" : [
+        {
+            "id" : 1,
+            "Title" : "Alloys & Orbit",
+            "Short_Description" : "Interactive space and material-science Hub.",
+            "imgUrl": "./public/images/alloys_orbit_thumbnail.jpg",
+            "Tabs" :[
+                {
+                    "label" : "Why I build it",
+                    "Reason" : "Plenty of space science exists online, from astrophysics to orbital mechanics and quantum physics. But the most useful parts of it, like interactive APIs, 3D simulations and dynamic data tools, are hard for space enthusiasts to reach and explore. <br />I built Alloys & Orbit so all of it lives in one place and is genuinely fun to use."
+                },
+                {
+                    "label" : "What it does",
+                    "Reason" : "Alloys & Orbit was developed as an interactive science portal that bridges aerospace engineering, quantum mechanics, and materials science. It goes beyond static blogging by integrating live NASA and space APIs with interactive simulations—allowing users to actively test atmospheric re-entry physics, explore celestial mechanics, and visualize deep-space discoveries."
+                },
+                {
+                    "label" : "How it works",
+                    "Reason": "Architecturally, the application runs on a Node.js and Express backend connected to a PostgreSQL database. It protects routes using bcrypt and session-based authentication, while using Axios to query live REST APIs like NASA and NewsAPI. The server injects this dynamic data into EJS templates, while client-side JavaScript drives real-time physics simulations."
+                }
+            ],
+            "Tech_Stack" : [
+                "EJS",
+                "CSS3",
+                "Node.js",
+                "Express.js",
+                "PostgreSql",
+                "Bcrypt",
+                "Axios",
+                "Git"
+            ],
+            "Visit_Live_Site" : "#",
+            "View_Source" : "https://github.com/Sukhada2005-stack/TimeLine-Scroll.git"
+        },
+        {
+            "id" : 2,
+            "Title" : "PMPulse - Autonomous Project Management Platform",
+            "Short_Description" : "An AI-powered project management platform with Agile/Scrum workflows, sprint analytics, and secure, isolated workspaces.",
+            "imgUrl" : "./public/images/pulsepm_thumbnail.jpg",
+            "Tabs":[
+                {
+                    "Label" : "Why I Build it",
+                    "Reason" : "At AcubeAI, the objective was to design an autonomous project management platform that removes the repetitive overhead from a project manager's day. PMPulse was built to address that need—integrating an active sprint mechanism with an intelligent AI layer to digest daily team check-ins, surface blockers, and generate structured executive summaries automatically."
+                },
+                {
+                    "Label" :"What it does",
+                    "Reason" : "PMPulse captures daily developer logs and blocker submissions across active sprints, using an AI engine to instantly synthesize them into structured executive intelligence. Through multi-dimensional filters, it delivers individual employee drilldowns, team cohort trends, milestone tracking, and prioritized impediment alerts—all in a centralized dashboard."
+                },
+                {
+                    "Label" : "How it works",
+                    "Reason" : "Developers submit daily logs and blocker reports mapped to active sprint cycles. When a manager configures project and personnel filters, the backend aggregates the relevant dataset and routes it through an AI copilot. The engine extracts key deliverables, isolates critical impediments, and renders a structured executive briefing in real time."
+                }
+            ],
+            "Tech_Stack":[
+                "React.js",
+                "Node.js",
+                "Express.js",
+                "PostgreSql",
+                "PM2 on Ubuntu",
+                "Google Gemini API Key"
+            ],
+            "Visit_Live_Site" : "",
+            "View_Source" : "https://github.com/Sukhada2005-stack/PMPulse-Simplified_AI_Project_Manager-.git"
+        }
+    ]
+}

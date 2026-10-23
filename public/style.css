@@ -286,22 +286,6 @@ nav ul {
     width: 100%;
 }
 
-.project {
-    width: 90%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px;
-    align-self: center;
-}
-
-#proj-heading {
-    margin: 0;
-    margin-left: 5%;
-    padding: 0;
-}
-
 .myImage {
     width: 300px;
     border-radius: 10px;
@@ -364,42 +348,46 @@ nav ul {
     border: 1px solid rgba(255, 255, 255, 0.14);
     width: 300px;
     border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-.card-heading{
+.card-heading {
     text-align: start;
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 17px;
 }
-.lang-grid-container{
+
+.lang-grid-container {
     margin: 0;
-    height:88%;
+    height: 88%;
     width: 100%;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    grid-gap:5.5px;
+    grid-gap: 5.5px;
 }
 
-.grid-items{
+.grid-items {
     border-radius: 7px;
     border: 1px solid rgba(255, 255, 255, 0.10);
-    padding:5px 0 0 0;
+    padding: 5px 0 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-.grid-items:hover{
-    border:1px solid rgba(255, 255, 255, 0.40);
+.grid-items:hover {
+    border: 1px solid rgba(255, 255, 255, 0.40);
 }
-.skill-name{
+
+.skill-name {
     margin: 0;
     padding: 0 0 5px 0;
-    color:white;
+    color: white;
     font-size: 0.85rem;
 }
 
@@ -619,10 +607,166 @@ textarea {
     }
 }
 
-/*8). Projects*/
-.project {
+/*=========================================
+8.Project.ejs
+==========================================*/
+
+
+.Domain-Headings {
+    color: white;
+    font-family: "Lato", sans-serif;
+    margin: 0 0 10px 20px;
+}
+
+.project-container {
+    width: 100%;
+    padding: 10px;
+    height: auto;
+    margin: 0 20px 0 20px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:35px;
+}
+
+.partitionDiv {
+    border-radius: 8px;
+    border: none;
+    height: 95%;
+    width: 0.5px;
+    background-color: brown;
+}
+
+/*=========================================
+9.Project_card.ejs
+==========================================*/
+.card-container {
+    background-color: #0a2f58;
+    width: 55%;
+    height: auto;
+    border: 1px solid #5d7ca3;
+    border-radius: 8.5px;
+    display: flex;
+}
+.card-container img {
+    background: #031a33; 
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 8.5px;
+    border-bottom-left-radius: 8.5px;
+}
+
+.content-container {
+    font-family: "Lato", sans-serif;
+    padding: 10px 10px 10px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project-title {
+    font-size: 27px;
+    font-weight: 500;
+}
+
+.project_description_short {
+    font-size: 0.9rem;
+    color: #e8eef7;
+    padding: 5px 0 0 0;
+}
+
+.sections {
+    padding: 10px 0 0 0;
+    display: flex;
     flex-wrap: wrap;
-    margin-top: 150px;
+    gap: 5px;
+}
+
+.sections button {
+    color:#b9c7da;
+    padding: 10px 5px;
+    border-radius: 8px;
+    font-size: 12px;
+    border: 1px solid #b9c7da;
+    width: 130px;
+    background-color: transparent;
+    font-weight: 700;
+    transition: background-color 0.3s,border 0.3s,color,0.3s;
+}
+
+.sections button:hover {
+    background-color: white;
+    border: 1px solid #031a33;
+    color:black;
+}
+
+.upper-content {
+    /* margin: 10px 0; */
+    padding: 10px 0;
+    border-bottom: 0.5px solid #5d7ca3;
+}
+
+
+.project-data p {
+    font-size: 0.86rem;
+    line-height: 20px;
+    min-height: 8em;
+    margin: 0;
+    padding: 0;
+    color: #e8eef7;
+    font-family: "Lato", sans-serif;
+}
+
+.tech-stack {
+    display: flex;
+    width: 100%;
+    height: auto;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 10px;
+}
+
+.tech-stack div {
+    background-color: rgb(22, 64, 111);
+    border: 0.5px solid #5d7ca3;
+    padding: 3px 10px;
+    width: 70px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.controls{
+    padding-top: 5px;
+    display: flex;
+    gap:10px;
+}
+
+.controls button{
+    padding:5px 10px;
+    border-radius: 7px;
+    font-weight: 550;
+    font-size: 12.5px;
+    width:140px;
+    text-align: center;
+}
+#btn1{
+  background-color: #ffb454;
+  border:none;
+  transition: transform 0.3s;
+}
+#btn1:hover{
+    transform: translateY(1.5px);
+}
+#btn2{
+   background-color: transparent;
+   border: 0.5px solid #8fa6c3;
+   color: white;
+   transition: border 0.3s, color 0.3s, transform 0.3s;
+}
+#btn2:hover{
+    border: 0.5px solid #ffb454;
+    color: #ffb454;
+    transform: translateY(1.5px);
 }

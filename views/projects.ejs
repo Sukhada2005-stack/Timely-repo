@@ -1,45 +1,14 @@
 <%- include("partials/header.ejs") %>
     <div class="web-dev-proj">
-        <h1 id="proj-heading">Web Development Projects</h1>
-        <div class="project">
-            <div class="proj1">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Alloys & Orbit ☄️</h5>
-                        <p class="card-text">Alloys & Orbit is an interactive, full-stack space & materials science hub
-                            that makes complex astrophysics genuinely fun. Built with Node.js, Express, EJS, and
-                            PostgreSQL, it lets users simulate planetary re-entry heat shields, track near-Earth
-                            asteroids, explore exoplanet catalogs, and consume live cosmic discoveries streamed directly
-                            from NASA's APIs.</p>
-                        <a href="#" class="btn btn-primary">Visit Website🔗</a>
-                    </div>
-                </div>
-            </div>
-            <div class="proj2">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card’s content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="proj3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card’s content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
+        <h1 class="Domain-Headings">Web Development Projects...</h1>
+        <div class="project-container">
+            <% if(locals.projects){ %>
+                 <% for(var project in projects){ %>
+                    <%- include('partials/project_card.ejs',{project}) %>
+                <% } %>
+            <% }else{ %>
+            
+                <% } %>
         </div>
     </div>
     <%- include("partials/footer.ejs") %>
