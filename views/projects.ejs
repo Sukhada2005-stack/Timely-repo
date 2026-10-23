@@ -3,12 +3,12 @@
         <h1 class="Domain-Headings">Web Development Projects...</h1>
         <div class="project-container">
             <% if(locals.projects){ %>
-                 <% for(var project in projects){ %>
+                <% for(const project of projects){ %>
                     <%- include('partials/project_card.ejs',{project}) %>
                 <% } %>
             <% }else{ %>
-            
-                <% } %>
+                <h3>Error Fetching the Projects Data!!</h3>
+            <% } %>
         </div>
     </div>
-    <%- include("partials/footer.ejs") %>
+<%- include("partials/footer.ejs") %>

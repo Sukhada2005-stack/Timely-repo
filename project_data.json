@@ -4,7 +4,7 @@
             "id" : 1,
             "Title" : "Alloys & Orbit",
             "Short_Description" : "Interactive space and material-science Hub.",
-            "imgUrl": "./public/images/alloys_orbit_thumbnail.jpg",
+            "imgUrl": "/images/alloys_orbit_thumbnail.jpg",
             "Tabs" :[
                 {
                     "label" : "Why I build it",
@@ -36,7 +36,7 @@
             "id" : 2,
             "Title" : "PMPulse - Autonomous Project Management Platform",
             "Short_Description" : "An AI-powered project management platform with Agile/Scrum workflows, sprint analytics, and secure, isolated workspaces.",
-            "imgUrl" : "./public/images/pulsepm_thumbnail.jpg",
+            "imgUrl" : "/images/pulsepm_thumbnail.jpg",
             "Tabs":[
                 {
                     "Label" : "Why I Build it",
@@ -57,7 +57,7 @@
                 "Express.js",
                 "PostgreSql",
                 "PM2 on Ubuntu",
-                "Google Gemini API Key"
+                "Gemini API Key"
             ],
             "Visit_Live_Site" : "",
             "View_Source" : "https://github.com/Sukhada2005-stack/PMPulse-Simplified_AI_Project_Manager-.git"

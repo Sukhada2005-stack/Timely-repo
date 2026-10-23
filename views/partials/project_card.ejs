@@ -25,11 +25,11 @@
                     distribution of letters, as opposed to using 'Content here, content here', making it look like
                     readable English.</p>
             </div>
-            <% for(var tool in project.Tech_Stack){ %>
             <div class="tech-stack">
-                <div> <%= tool %> </div>
+                <% for(const skill of project.Tech_Stack){ %>
+                <div> <%= skill %> </div>
+                <% } %>
             </div>
-            <% } %>
             <div class="controls">
                 <button id="btn1" type="button">Visit Live Site</button>
                 <button id="btn2" type="button">View Source</button>
