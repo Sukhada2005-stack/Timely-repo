@@ -627,7 +627,7 @@ textarea {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:35px;
+    gap: 35px;
 }
 
 .partitionDiv {
@@ -649,8 +649,9 @@ textarea {
     border-radius: 8.5px;
     display: flex;
 }
+
 .card-container img {
-    background: #031a33; 
+    background: #031a33;
     width: 100%;
     height: 100%;
     border-top-left-radius: 8.5px;
@@ -662,7 +663,7 @@ textarea {
     padding: 10px 10px 10px 15px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
 
 .project-title {
@@ -684,7 +685,7 @@ textarea {
 }
 
 .sections button {
-    color:#b9c7da;
+    color: #b9c7da;
     padding: 10px 5px;
     border-radius: 8px;
     font-size: 12px;
@@ -692,13 +693,13 @@ textarea {
     width: 130px;
     background-color: transparent;
     font-weight: 700;
-    transition: background-color 0.3s,border 0.3s,color,0.3s;
+    transition: background-color 0.3s, border 0.3s, color, 0.3s;
 }
 
 .sections button:hover {
     background-color: white;
     border: 1px solid #031a33;
-    color:black;
+    color: black;
 }
 
 .upper-content {
@@ -737,36 +738,59 @@ textarea {
     border-radius: 30px;
 }
 
-.controls{
+.controls {
     padding-top: 5px;
     display: flex;
-    gap:10px;
+    gap: 10px;
 }
 
-.controls button{
-    padding:5px 10px;
+.controls button {
+    padding: 5px 10px;
     border-radius: 7px;
     font-weight: 550;
     font-size: 12.5px;
-    width:140px;
+    width: 140px;
     text-align: center;
 }
-#btn1{
-  background-color: #ffb454;
-  border:none;
-  transition: transform 0.3s;
+
+.btn1 {
+    background-color: #ffb454;
+    border: none;
+    transition: transform 0.3s;
 }
-#btn1:hover{
+
+.btn1:hover {
     transform: translateY(1.5px);
 }
-#btn2{
-   background-color: transparent;
-   border: 0.5px solid #8fa6c3;
-   color: white;
-   transition: border 0.3s, color 0.3s, transform 0.3s;
+
+.btn2 {
+    background-color: transparent;
+    border: 0.5px solid #8fa6c3;
+    color: white;
+    transition: border 0.3s, color 0.3s, transform 0.3s;
 }
-#btn2:hover{
+
+.btn2:hover {
     border: 0.5px solid #ffb454;
     color: #ffb454;
     transform: translateY(1.5px);
+}
+
+.tab-btn.active {
+    border-color: #ffb454;
+    color: #fff;
+}
+
+.tab-panel[hidden] {
+    display: none;
+}
+
+
+/* Footer */
+.container1{
+    height:60px;
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+    gap:15px;
 }

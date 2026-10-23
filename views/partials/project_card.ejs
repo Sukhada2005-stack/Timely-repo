@@ -1,9 +1,9 @@
 <div class="card-container">
     <% if(locals.project){ %>
-    <div class="img-container">
-        <img src="<%= project.imgUrl %>" alt="">
-    </div>
-    <div class="content-container">
+        <div class="img-container">
+            <img src="<%= project.imgUrl %>" alt="">
+        </div>
+        <div class="content-container">
             <div class="upper-content">
                 <h3 class="project-title">
                     <%= project.Title %>
@@ -12,28 +12,32 @@
                     <%= project.Short_Description %>
                 </p>
                 <div class="sections">
-                    <button type="button">Why I Build it</button>
-                    <button type="button">What it does</button>
-                    <button type="button">How it works</button>
+                    <% project.Tabs.forEach(function (tab, i) { %>
+                        <button type="button" class="tab-btn<%= i === 0 ? ' active' : '' %>" data-tab="<%= i %>">
+                            <%= tab.label %>
+                        </button>
+                        <% }) %>
                 </div>
             </div>
             <!-- require a number flag to select the data of the particular tab -->
             <div class="project-data">
-                <p>It is a long established fact that a reader will be distracted by the readable content of a page
-                    when
-                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                    distribution of letters, as opposed to using 'Content here, content here', making it look like
-                    readable English.</p>
+                <% project.Tabs.forEach(function (tab, i) { %>
+                    <div class="tab-panel" data-panel="<%= i %>" <%=i===0 ? '' : 'hidden' %>>
+                        <p><%- tab.Reason %></p>
+                    </div>
+                    <% }) %>
             </div>
             <div class="tech-stack">
                 <% for(const skill of project.Tech_Stack){ %>
-                <div> <%= skill %> </div>
-                <% } %>
+                    <div>
+                        <%= skill %>
+                    </div>
+                    <% } %>
             </div>
             <div class="controls">
-                <button id="btn1" type="button">Visit Live Site</button>
-                <button id="btn2" type="button">View Source</button>
+                <button class="btn1" type="button">Visit Live Site</button>
+                <button class="btn2" type="button">View Source</button>
             </div>
             <% } %>
-    </div>
+        </div>
 </div>

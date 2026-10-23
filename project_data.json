@@ -8,7 +8,7 @@
             "Tabs" :[
                 {
                     "label" : "Why I build it",
-                    "Reason" : "Plenty of space science exists online, from astrophysics to orbital mechanics and quantum physics. But the most useful parts of it, like interactive APIs, 3D simulations and dynamic data tools, are hard for space enthusiasts to reach and explore. <br />I built Alloys & Orbit so all of it lives in one place and is genuinely fun to use."
+                    "Reason" : "Plenty of space science exists online—from astrophysics to orbital mechanics and quantum physics. But the most useful parts—like interactive APIs, 3D simulations, and dynamic data tools—are hard for space enthusiasts to reach and explore. That's why Alloys & Orbit was built, so that all of it lives in one place and is fun and easy to use."
                 },
                 {
                     "label" : "What it does",
@@ -39,15 +39,15 @@
             "imgUrl" : "/images/pulsepm_thumbnail.jpg",
             "Tabs":[
                 {
-                    "Label" : "Why I Build it",
+                    "label" : "Why I Build it",
                     "Reason" : "At AcubeAI, the objective was to design an autonomous project management platform that removes the repetitive overhead from a project manager's day. PMPulse was built to address that need—integrating an active sprint mechanism with an intelligent AI layer to digest daily team check-ins, surface blockers, and generate structured executive summaries automatically."
                 },
                 {
-                    "Label" :"What it does",
+                    "label" :"What it does",
                     "Reason" : "PMPulse captures daily developer logs and blocker submissions across active sprints, using an AI engine to instantly synthesize them into structured executive intelligence. Through multi-dimensional filters, it delivers individual employee drilldowns, team cohort trends, milestone tracking, and prioritized impediment alerts—all in a centralized dashboard."
                 },
                 {
-                    "Label" : "How it works",
+                    "label" : "How it works",
                     "Reason" : "Developers submit daily logs and blocker reports mapped to active sprint cycles. When a manager configures project and personnel filters, the backend aggregates the relevant dataset and routes it through an AI copilot. The engine extracts key deliverables, isolates critical impediments, and renders a structured executive briefing in real time."
                 }
             ],
